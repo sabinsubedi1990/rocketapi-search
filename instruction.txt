@@ -1,0 +1,43 @@
+Install node.js application on a computer
+
+I have done the following to create the react application
+
+Create React App: create new application
+- npx create-react-app rocketapi-search
+- cd rocketapi-search
+
+Install axios: for api creation
+- npm install axios
+
+Start the application
+- npm start 
+
+The app will open on http://localhost:3000
+
+Project structure is as below:
+
+rocketapi-search
+-- node_modules: includes the downloaded dependencies added on package.json 
+-- public
+-- src
+--- App.css : css of the application
+--- App.js: : added functionality of the search.
+--- App.test.js: unit tests can be added here
+--- index.css: css of the index page
+--- index.js: calls the App.js component
+--- logo.svg 
+- pacakge.json: dependencies, configuration, scripts are added here
+
+Funtionality added on input:
+- handleChange: it will get the vaue entered in the input box and apply the validation according to the requirement 
+    and then set the search term useState 
+- handlePaste: it will prevent the paste event
+- handleSearch: it will validte the searchTerm and send the request to url using axiom with required 
+    headers parameter(token-key, host, content-type) and get a response and set the response to setUser useState
+    and show it on the card container.
+    If there is any error it will catch the error ans setError to useState and display in the the card container
+
+
+Issue/Note: 
+    There is an issue loading the profile pic image. for this we need to create a small backend that fetches the iamges and 
+    on the frontend we woudl fetch the image bypassing the CORS limitations.
